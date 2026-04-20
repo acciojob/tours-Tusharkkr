@@ -11,8 +11,8 @@ const Tour = ({ value }) => {
             <img src={value.image} width='100%' />
             <h1>Name : {value.name}</h1>
             <h2>price : {value.price}</h2>
-            {showmore ? <p id={`tour-item-para-${value.id}`} >Info : {value.info.slice(0, 200)}.....</p> : <p>Info : {value.info}</p>}
-            {showmore ? <button onClick={() => setShowmore(false)}>Show more</button> : <button onClick={() => setShowmore(true)}>Show less</button>}
+            {showmore ? <p id={`tour-item-para-${value.id}`} >Info : {value.info.slice(0, 200)}.....</p> : <p id={`delete-btn-${value.id}`}>Info : {value.info}</p>}
+            {showmore ? <button onClick={() => setShowmore(false)}>Show more</button> : <button id={`delete-btn-${value.id}`} onClick={() => setShowmore(true)}>Show less</button>}
             <button id={`delete-btn-${value.id}`} onClick={(e) => {
                 e.target.parentElement.remove()
             }}>Remove Tour</button>
