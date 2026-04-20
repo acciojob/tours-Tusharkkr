@@ -7,7 +7,6 @@ const App = () => {
     return(
       <main id="main">
         <Tours/>
-        {/* <Tour/> */}
       </main>
     )
 }
